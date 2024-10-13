@@ -22,12 +22,14 @@ public class WordChecker {
     public ArrayList<String> createList(String target)
     {
         ArrayList<String> newList = new ArrayList<String>();
-        if (wordList.get(0) == target)
+        for (String og : wordList)
         {
-            String after = wordList.get(0);
-            after = after.substring(3, after.length());
-            newList.add(after);
+            if (og.indexOf(target) == 0)
+            {
+                String after = og.substring(target.length());
+                newList.add(after);
+            }
         }
-        return newList; 
+        return newList;
     }
 }
