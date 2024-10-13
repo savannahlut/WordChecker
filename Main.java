@@ -27,5 +27,7 @@ public class Main
         beauty.add("at");
         WordChecker z = new WordChecker(beauty);
         System.out.println(z.createList("cat"));
+        System.out.println(z.createList("catch"));
+        System.out.println(z.createList("dog"));
     }
 }
